@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+  }
+  
+  .btn-warning {
+    @apply btn bg-warning-600 text-white hover:bg-warning-700 focus:ring-warning-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-md hover:border-gray-300 transition-all duration-200 cursor-pointer;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .math-number {
+    @apply inline-flex items-center justify-center min-w-[2rem] h-8 px-2 rounded font-mono text-lg font-semibold;
+  }
+  
+  .math-number-default {
+    @apply math-number bg-gray-100 text-gray-800;
+  }
+  
+  .math-number-highlight {
+    @apply math-number bg-primary-100 text-primary-800 ring-2 ring-primary-300;
+  }
+  
+  .math-number-success {
+    @apply math-number bg-success-100 text-success-800;
+  }
+  
+  .math-number-warning {
+    @apply math-number bg-warning-100 text-warning-800;
+  }
+  
+  .math-operator {
+    @apply inline-flex items-center justify-center w-8 h-8 text-xl font-bold text-gray-600;
+  }
+  
+  .visual-step {
+    @apply p-4 rounded-lg border-2 border-transparent transition-all duration-300;
+  }
+  
+  .visual-step.active {
+    @apply border-primary-300 bg-primary-50;
+  }
+  
+  .step-explanation {
+    @apply text-sm text-gray-600 mt-2 p-3 bg-gray-50 rounded-lg;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm;
+  }
+}
